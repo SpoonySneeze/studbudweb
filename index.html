@@ -1,11 +1,27 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudBud: AI Study Planner</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>StudBud</h1>
-    <p>StudBud: AI Personalized Study Planner is an innovative application that creates customized study plans for students based on their individual academic goals, strengths, weaknesses, and learning preferences. By leveraging advanced natural language processing techniques—particularly the BERT model—it analyzes users’ input to generate a balanced, efficient study schedule that targets areas needing improvement. The system integrates a modern technology stack, including a FastAPI-based backend, a React-driven frontend, and containerization tools like Docker, ensuring scalability and a smooth user experience. Overall, StudBud offers a tailored approach to learning, empowering students to manage their study time more effectively and achieve their academic targets.</p>
+
+  <div class="container">
+    <h1>StudBud: AI Study Planner</h1>
+    <div class="input-container">
+      <label for="goal">Enter your study goal:</label>
+      <input type="text" id="goal" placeholder="e.g., Learn Python programming">
+      <button id="generate-btn">Generate Study Plan</button>
+    </div>
+    <div id="error" class="error"></div>
+    <div id="study-plan" class="study-plan">
+      <h2>Your Study Plan:</h2>
+      <p id="plan-text"></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+
 </body>
 </html>
