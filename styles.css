@@ -28,10 +28,23 @@ body {
   width: 100%;
 }
 
+/* Logo */
+.logo {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
 /* Heading */
 h1 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 2em;
+}
+
+/* Tagline */
+.tagline {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  color: #61dafb;
 }
 
 /* Input container */
