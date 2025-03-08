@@ -13,7 +13,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+  min-height: 100vh;
   margin: 0;
 }
 
@@ -24,7 +24,7 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  max-width: 500px;
+  max-width: 800px;
   width: 100%;
 }
 
@@ -42,15 +42,19 @@ h1 {
 label {
   display: block;
   margin-bottom: 10px;
+  font-size: 1.2em;
 }
 
-/* Input field */
-input {
-  width: 80%;
+/* Textarea for prompt */
+textarea {
+  width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-bottom: 10px;
+  font-size: 1em;
+  resize: vertical;
+  min-height: 100px;
 }
 
 /* Button */
@@ -61,6 +65,7 @@ button {
   border-radius: 5px;
   color: #282c34;
   cursor: pointer;
+  font-size: 1em;
 }
 
 button:disabled {
@@ -74,18 +79,21 @@ button:disabled {
   margin-bottom: 10px;
 }
 
-/* Study plan section */
-.study-plan {
-  background-color: #4a4f5b;
-  padding: 15px;
-  border-radius: 5px;
+/* Output section */
+.output {
+  margin-top: 20px;
   text-align: left;
 }
 
-.study-plan h2 {
+.output h2 {
   margin-bottom: 10px;
 }
 
-#plan-text {
-  margin: 0;
+/* Generated code */
+pre {
+  background-color: #4a4f5b;
+  padding: 15px;
+  border-radius: 5px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
