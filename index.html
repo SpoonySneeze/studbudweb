@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StudBud: AI Code Generator</title>
+  <title>StudBud: AI Study Planner</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
-    <h1>StudBud: AI Code Generator</h1>
+    <h1>StudBud: AI Study Planner</h1>
     <div class="input-container">
-      <label for="prompt">Enter your prompt:</label>
-      <textarea id="prompt" placeholder="e.g., Write a Python function to calculate factorial."></textarea>
-      <button id="generate-btn">Generate Code</button>
+      <label for="goal">Enter your study goal:</label>
+      <input type="text" id="goal" placeholder="e.g., Learn Python programming">
+      <button id="generate-btn">Generate Study Plan</button>
     </div>
     <div id="error" class="error"></div>
-    <div id="output" class="output">
-      <h2>Generated Code:</h2>
-      <pre id="generated-code"></pre>
+    <div id="study-plan" class="study-plan">
+      <h2>Your Study Plan:</h2>
+      <pre id="plan-text"></pre>
     </div>
   </div>
   <script src="script.js"></script>

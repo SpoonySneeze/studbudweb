@@ -24,13 +24,14 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  max-width: 800px;
+  max-width: 600px;
   width: 100%;
 }
 
 /* Heading */
 h1 {
   margin-bottom: 20px;
+  font-size: 2em;
 }
 
 /* Input container */
@@ -45,16 +46,14 @@ label {
   font-size: 1.2em;
 }
 
-/* Textarea for prompt */
-textarea {
+/* Input field */
+input {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-bottom: 10px;
   font-size: 1em;
-  resize: vertical;
-  min-height: 100px;
 }
 
 /* Button */
@@ -79,21 +78,24 @@ button:disabled {
   margin-bottom: 10px;
 }
 
-/* Output section */
-.output {
+/* Study plan section */
+.study-plan {
   margin-top: 20px;
   text-align: left;
 }
 
-.output h2 {
+.study-plan h2 {
   margin-bottom: 10px;
+  font-size: 1.5em;
 }
 
-/* Generated code */
+/* Generated plan text */
 pre {
   background-color: #4a4f5b;
   padding: 15px;
   border-radius: 5px;
   white-space: pre-wrap;
   word-wrap: break-word;
+  font-family: monospace;
+  font-size: 1em;
 }

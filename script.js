@@ -1,14 +1,14 @@
 document.getElementById("generate-btn").addEventListener("click", async () => {
-  const prompt = document.getElementById("prompt").value;
+  const goal = document.getElementById("goal").value;
   const errorElement = document.getElementById("error");
-  const generatedCodeElement = document.getElementById("generated-code");
+  const planTextElement = document.getElementById("plan-text");
 
   // Clear previous results
   errorElement.textContent = "";
-  generatedCodeElement.textContent = "";
+  planTextElement.textContent = "";
 
-  if (!prompt) {
-    errorElement.textContent = "Please enter a prompt.";
+  if (!goal) {
+    errorElement.textContent = "Please enter a study goal.";
     return;
   }
 
@@ -19,26 +19,27 @@ document.getElementById("generate-btn").addEventListener("click", async () => {
 
   try {
     // Send a POST request to the backend
-    const response = await fetch("http://localhost:5000/generate-code", {
+    const response = await fetch("http://localhost:5000/generate-plan", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ prompt: prompt, max_length: 256 }),
+      body: JSON.stringify({ goal: goal }), // Send the goal as JSON
     });
 
     if (!response.ok) {
-      throw new Error("Failed to generate code.");
+      throw new Error("Failed to generate study plan.");
     }
 
+    // Parse the response and display the study plan
     const data = await response.json();
-    generatedCodeElement.textContent = data.generated_code;
+    planTextElement.textContent = data.study_plan;
   } catch (error) {
     console.error("Error:", error);
-    errorElement.textContent = "Failed to generate code. Please try again.";
+    errorElement.textContent = "Failed to generate study plan. Please try again.";
   } finally {
     // Re-enable the button
     generateBtn.disabled = false;
-    generateBtn.textContent = "Generate Code";
+    generateBtn.textContent = "Generate Study Plan";
   }
 });
